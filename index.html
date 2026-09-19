@@ -39,6 +39,11 @@ h2{font-size:clamp(26px,4.5vw,56px);line-height:1.35;margin-bottom:24px}
 .section{padding:110px 0}
 .center{text-align:center}
 .lead{font-size:16px;color:#5e6b72}
+
+/* PC/スマホ 改行切り替え用クラス */
+.sp-only { display: none !important; }
+.pc-only { display: inline !important; }
+
 .hero{
   min-height:820px;position:relative;display:flex;align-items:center;overflow:hidden;
   background:
@@ -154,7 +159,7 @@ h1 span.highlight{color:var(--coral)}
   padding:125px 0 145px;text-align:center;color:#fff;
   background:
     linear-gradient(120deg,rgba(70,94,106,.94),rgba(188,125,113,.82)),
-    url("assets/event1.jpg") center/cover;
+    url("assets/event1.jpg") center center/cover;
 }
 .final h2{font-size:clamp(32px,5.5vw,68px);margin-bottom:18px}
 .final p.final-lead{color:rgba(255,255,255,.88);max-width:650px;margin:0 auto 32px;line-height:2;font-size:16px;}
@@ -181,6 +186,10 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
 }
 
 @media(max-width:850px){
+  /* レスポンシブ時の改行切り替え */
+  .sp-only { display: inline !important; }
+  .pc-only { display: none !important; }
+
   .hero{padding:70px 0 90px}
   .hero-grid,.two-col,.journey,.value-head{grid-template-columns:1fr;gap:45px}
   .hero-visual{order:-1}
@@ -225,12 +234,12 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
   .intro .quote{font-size:18px;line-height:1.6;}
   .bigline{font-size:17px;line-height:1.6;padding:18px 0;margin:20px 0;}
 
-  /* 最下部バックグラウンド画像の縮尺・位置調整 */
+  /* 最下部背景画像を中心寄せ配置にして見切れ防止 */
   .final{
     padding:80px 0 100px;
     background:
       linear-gradient(120deg,rgba(70,94,106,.94),rgba(188,125,113,.82)),
-      url("assets/event1.jpg") center top / cover;
+      url("assets/event1.jpg") center center / cover;
   }
 }
 </style>
@@ -251,7 +260,7 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
         「今日はありがとうございました」で終わる。<br>
         そんな交流会ではありません。
       </p>
-      <a class="btn" href="https://forms.gle/nYaSBe9MeGdcYiVJA" target="_blank" rel="noopener">参加する・チケットを申し込む →</a>
+      <a class="btn" href="https://forms.gle/nYaSBe9MeGdcYiVJA" target="_blank" rel="noopener">参加する・チケットを申し込む</a>
     </div>
     <div class="hero-visual">
       <div class="hand">Connect, Grow,<br>& Support each other.</div>
@@ -273,13 +282,14 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
   <div class="wrap intro center">
     <div class="eyebrow">FOR ALL CHALLENGERS</div>
     <h2>みんな同じ<br>「挑戦の途中」にいる人たち。</h2>
+    
     <p class="lead">
-      これから何かを始めてみたい人、いま一歩を踏み出そうとしている人。<br>
-      起業している人もしていない人も、まだ結果は出ていなくても前に進もうとしている人も。
+      これから何かを始めてみたい人、<br class="sp-only">今一歩を踏み出そうとしている人、<br class="pc-only"><br class="sp-only">起業している人もしていない人も、<br class="sp-only">まだ結果は出ていなくても前に進もうとしている人も。
     </p>
+
     <div class="quote">
       出会い、つながり、育み、<span class="nobr">応援し合う。</span><br>
-      <em>それぞれのペースで「次の未来」へ進んでいく1日に。</em>
+      <em>それぞれのペースで<br class="sp-only">「次の未来」へ進んでいく1日に。</em>
     </div>
   </div>
 </section>
@@ -429,7 +439,7 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
       お互いの挑戦を応援し合える温かい場所で、<br>
       あなたの「次の一歩」を踏み出しませんか？
     </p>
-    <a class="btn" href="https://forms.gle/nYaSBe9MeGdcYiVJA" target="_blank" rel="noopener">参加する・チケットを申し込む →</a>
+    <a class="btn" href="https://forms.gle/nYaSBe9MeGdcYiVJA" target="_blank" rel="noopener">参加する・チケットを申し込む</a>
     <div class="form-url">forms.gle/nYaSBe9MeGdcYiVJA</div>
     <div class="info">
       <div class="info-row"><dt>日時</dt><dd>2027年2月6日（土）13:00〜16:00</dd></div>
