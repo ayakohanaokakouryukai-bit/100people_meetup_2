@@ -114,7 +114,7 @@ h1 span.highlight{color:var(--coral)}
 .mosaic{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:55px}
 .mosaic-main{position:relative}
 .mosaic-main img{height:100%;object-fit:cover;min-height:520px;border-radius:3px}
-.mosaic-side{display:grid;grid-template-rows:1fr 1fr;gap:0;border-radius:3px;overflow:hidden}
+.mosaic-side{display:grid;grid-template-rows:1fr 1fr;gap:18px;border-radius:3px;overflow:hidden}
 .mosaic-side img{height:100%;object-fit:cover}
 .caption{
   position:absolute;left:22px;bottom:18px;color:#fff;
@@ -185,28 +185,53 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
   .hero-grid,.two-col,.journey,.value-head{grid-template-columns:1fr;gap:45px}
   .hero-visual{order:-1}
   .hero-visual img{aspect-ratio:1.3}
+  
+  /* スマホ時にテキストを上、画像を下に配置 */
+  .two-col .story-copy { order: 1; }
+  .two-col .story-photo { order: 2; }
+
   .value-grid{grid-template-columns:repeat(2,1fr)}
   .value{border-bottom:1px solid var(--line)}
   .value:last-child{border-right:0}
+  
   .mosaic{grid-template-columns:1fr}
-  .mosaic-side{grid-template-columns:1fr 1fr;grid-template-rows:1fr}
-  .mosaic-main img{min-height:380px}
+  .mosaic-side{grid-template-columns:1fr 1fr;grid-template-rows:1fr;gap:12px}
+  .mosaic-side img{height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:3px}
+  .mosaic-main img{min-height:300px;aspect-ratio:16/9;object-fit:cover}
+
   .manifesto-grid{grid-template-columns:1fr 1fr}
   .section{padding:80px 0}
   .sticky{display:block}
 }
+
 @media(max-width:520px){
   .wrap{width:calc(100% - 28px)}
   .hero:before{font-size:80px;top:40px}
   .hand{left:0;bottom:-35px;font-size:21px}
   .value-grid,.manifesto-grid{grid-template-columns:1fr}
-  .mosaic-side{grid-template-columns:1fr}
-  .mosaic-main img{min-height:300px}
+  
+  /* スマホでの画像の拡大（ズーム）解消 */
+  .mosaic-side{grid-template-columns:1fr;gap:12px}
+  .mosaic-side img{height:auto;aspect-ratio:16/9;object-fit:cover}
+  .mosaic-main img{min-height:220px;aspect-ratio:16/9}
+
   .section{padding:68px 0}
   .hero-visual:after{right:-10px;bottom:-10px}
   .info-row{display:block}.info-row dt{margin-bottom:2px}
   body{padding-bottom:64px}
   .journey-photo img{width:220px;height:220px;}
+
+  /* 引用・ハイライト文字サイズの微調整 */
+  .intro .quote{font-size:18px;line-height:1.6;}
+  .bigline{font-size:17px;line-height:1.6;padding:18px 0;margin:20px 0;}
+
+  /* 最下部バックグラウンド画像の縮尺・位置調整 */
+  .final{
+    padding:80px 0 100px;
+    background:
+      linear-gradient(120deg,rgba(70,94,106,.94),rgba(188,125,113,.82)),
+      url("assets/event1.jpg") center top / cover;
+  }
 }
 </style>
 </head>
@@ -253,7 +278,7 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
       起業している人もしていない人も、まだ結果は出ていなくても前に進もうとしている人も。
     </p>
     <div class="quote">
-      出会い、つながり、育み、応援し合う。<br>
+      出会い、つながり、育み、<span class="nobr">応援し合う。</span><br>
       <em>それぞれのペースで「次の未来」へ進んでいく1日に。</em>
     </div>
   </div>
@@ -326,7 +351,7 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
         背中を押しあい、お互いに約束しつづけてきたから今日まで歩いてくることができました。一人では続かないことも、約束し合える仲間ができたからです。
       </p>
       <div class="bigline">
-        「ひとりでやらない、つながる、育む。<br>そして、怖がらずに挑戦し合おう」
+        「1人でやらない、つながり続ける<br>そして怖がらずに挑戦し合おう」
       </div>
       <p>
         今度は私があのときの私のような人が孤独を感じず、安心して一歩を踏み出せる場所をつくりたい。<br>
@@ -340,7 +365,7 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
   <div class="wrap">
     <div class="center">
       <div class="eyebrow">OUR GOAL</div>
-      <h2>目指しているのは、<br>ただ100人を集めることではありません。</h2>
+      <h2>目指しているのは<br>ただ100人を集めることでは<br>ありません。</h2>
     </div>
     <div class="manifesto-grid">
       <div class="manifesto-card">
@@ -417,6 +442,6 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
 </section>
 
 <footer>100人の挑戦が、ここでつながる。 © 2027</footer>
-<div class="sticky"><a class="btn" href="https://forms.gle/nYaSBe9MeGdcYiVJA" target="_blank" rel="noopener">2027/2/6 参加する →</a></div>
+<div class="sticky"><a class="btn" href="https://forms.gle/nYaSBe9MeGdcYiVJA" target="_blank" rel="noopener">2027/2/6 参加する</a></div>
 </body>
 </html>
