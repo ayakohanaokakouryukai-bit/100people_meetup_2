@@ -147,10 +147,19 @@ h1 span.highlight{color:var(--coral)}
 .journey{
   display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center
 }
-.journey-photo{display:flex;justify-content:center;align-items:center}
+.journey-photo{display:flex;flex-direction:column;justify-content:center;align-items:center}
 .journey-photo img{
   width:300px;height:300px;aspect-ratio:1/1;object-fit:cover;border-radius:50%;
   box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.journey-photo-name{
+  margin-top:18px;
+  font-size:18px;
+  font-family:"Shippori Mincho",serif;
+  letter-spacing:.08em;
+  color:var(--ink);
+  margin-bottom:0;
+  text-align:center;
 }
 .checks{list-style:none;padding:0;margin:30px 0}
 .checks li{padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -424,7 +433,8 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
       </ul>
     </div>
     <div class="journey-photo">
-      <img src="assets/event6.jpg" alt="主催者写真">
+      <img src="assets/event6.jpg" alt="主催者 花岡綾子">
+      <p class="journey-photo-name">主催者 花岡綾子</p>
     </div>
   </div>
 </section>
