@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>100人の挑戦が、ここでつながる。｜2027.2.6</title>
+<meta name="description" content="100人の挑戦が、ここでつながる。2027年2月6日（土）開催の100人交流会。">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+
+:root{
+  --ink:#273745;
+  --blue:#7599aa;
+  --blue-deep:#506f7e;
+  --coral:#d98275;
+  --pink:#efd8d2;
+  --cream:#fbf8f2;
+  --sand:#eee5d8;
+  --line:#ddd5ca;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:var(--cream);
+  font-family:"Zen Kaku Gothic New",sans-serif;line-height:1.9;
+}
+img{display:block;width:100%}
+a{text-decoration:none;color:inherit}
+.serif{font-family:"Shippori Mincho",serif}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+.eyebrow{
+  font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--coral);font-weight:700;margin-bottom:14px
+}
+h1,h2,h3,p{margin-top:0}
+h1,h2{font-family:"Shippori Mincho",serif;font-weight:500}
+h2{font-size:clamp(32px,5vw,56px);line-height:1.35;margin-bottom:24px}
+.section{padding:110px 0}
+.center{text-align:center}
+.lead{font-size:16px;color:#5e6b72}
+.hero{
+  min-height:820px;position:relative;display:flex;align-items:center;overflow:hidden;
+  background:
+    radial-gradient(circle at 8% 20%,rgba(239,216,210,.65),transparent 27%),
+    linear-gradient(120deg,#fffdf9,#f7f1e9 55%,#edf4f4);
+}
+.hero:before{
+  content:"100 people";position:absolute;right:-40px;top:70px;
+  font-family:"Shippori Mincho",serif;font-size:150px;color:rgba(117,153,170,.07);
+  transform:rotate(-8deg);white-space:nowrap
+}
+.hero-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:70px;align-items:center}
+.hero-copy{position:relative;z-index:2}
+.katakana{
+  color:var(--coral);font-size:15px;letter-spacing:.18em;margin-bottom:12px;
+  font-family:"Shippori Mincho",serif
+}
+h1{font-size:clamp(48px,7vw,82px);line-height:1.12;letter-spacing:.03em;margin-bottom:28px}
+h1 span{color:var(--coral)}
+.hero-date{
+  display:flex;align-items:center;gap:14px;margin:25px 0 28px;
+  font-family:"Shippori Mincho",serif;font-size:20px
+}
+.hero-date i{display:block;width:45px;height:1px;background:var(--coral)}
+.hero-text{font-size:16px;color:#5d686d;margin-bottom:34px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:14px;
+  background:var(--coral);color:#fff;border-radius:999px;padding:15px 28px;
+  font-weight:700;letter-spacing:.06em;box-shadow:0 12px 28px rgba(170,94,82,.2);
+  transition:.2s
+}
+.btn:hover{transform:translateY(-2px)}
+.hero-visual{position:relative}
+.hero-visual img{aspect-ratio:1.05;object-fit:cover;border-radius:2px 80px 2px 80px;position:relative;z-index:2}
+.hero-visual:after{
+  content:"";position:absolute;inset:25px -25px -25px 25px;border:1px solid var(--coral);
+  border-radius:2px 80px 2px 80px;opacity:.55
+}
+.hand{
+  position:absolute;z-index:4;left:-35px;bottom:22px;
+  font-family:"Shippori Mincho",serif;font-style:italic;color:var(--blue-deep);
+  font-size:27px;line-height:1.1;transform:rotate(-8deg)
+}
+.ribbon{
+  background:var(--blue-deep);color:#fff;padding:13px 0;
+  overflow:hidden;white-space:nowrap;font-family:"Shippori Mincho",serif
+}
+.ribbon-track{display:flex;justify-content:center;gap:50px;font-size:14px;letter-spacing:.15em}
+.intro{max-width:850px}
+.intro .quote{
+  font-family:"Shippori Mincho",serif;font-size:clamp(23px,3vw,35px);
+  line-height:1.7;margin:38px 0
+}
+.quote em{font-style:normal;color:var(--coral)}
+.values{background:#fff}
+.value-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:50px;align-items:end}
+.value-head h2{margin:0}
+.value-grid{display:grid;grid-template-columns:repeat(5,1fr);margin-top:60px}
+.value{
+  text-align:center;padding:24px 15px;border-left:1px solid var(--line)
+}
+.value:last-child{border-right:1px solid var(--line)}
+.circle{
+  width:76px;height:76px;border-radius:50%;margin:0 auto 18px;
+  display:flex;align-items:center;justify-content:center;
+  background:#f3e2de;font-family:"Shippori Mincho",serif;font-size:25px;color:var(--coral)
+}
+.value:nth-child(2) .circle{background:#f2e8d3;color:#b59455}
+.value:nth-child(3) .circle{background:#e1edf0;color:var(--blue-deep)}
+.value:nth-child(4) .circle{background:#e5eee6;color:#728a78}
+.value:nth-child(5) .circle{background:#f4dede;color:#bf6c68}
+.value h3{font-family:"Shippori Mincho",serif;font-size:20px;margin-bottom:7px}
+.value p{font-size:12px;color:#6b7479;margin:0}
+.mosaic{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:55px}
+.mosaic-main{position:relative}
+.mosaic-main img{height:100%;object-fit:cover;min-height:520px}
+.mosaic-side{display:grid;grid-template-rows:1fr 1fr;gap:18px}
+.mosaic img{border-radius:3px}
+.caption{
+  position:absolute;left:22px;bottom:18px;color:#fff;
+  font-family:"Shippori Mincho",serif;font-size:29px;font-style:italic;
+  text-shadow:0 2px 12px #000
+}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.story-photo{position:relative}
+.story-photo img{aspect-ratio:.86;object-fit:cover}
+.story-photo:before{
+  content:"";position:absolute;left:-18px;top:18px;width:100%;height:100%;
+  border:1px solid var(--blue);z-index:-1
+}
+.story-copy p{color:#5c676d}
+.bigline{
+  font-family:"Shippori Mincho",serif;font-size:28px;line-height:1.6;
+  padding:25px 0;margin:25px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+}
+.manifesto{background:#edf4f4}
+.manifesto-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:50px}
+.manifesto-card{background:#fff;padding:34px;border:1px solid #dce6e7}
+.manifesto-card b{font-family:"Shippori Mincho",serif;font-size:24px;font-weight:500;color:var(--blue-deep)}
+.manifesto-card p{font-size:14px;color:#657177;margin:8px 0 0}
+.journey{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center
+}
+.journey-photo img{aspect-ratio:1.35;object-fit:cover}
+.checks{list-style:none;padding:0;margin:30px 0}
+.checks li{padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}
+.checks li:before{content:"✓";color:var(--coral);font-weight:bold;margin-right:13px}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:45px}
+.step{padding:25px 20px;background:#fff;border-top:2px solid var(--coral)}
+.step .no{font-size:11px;letter-spacing:.18em;color:var(--coral)}
+.step strong{display:block;font-family:"Shippori Mincho",serif;font-size:20px;margin:6px 0}
+.step span{font-size:12px;color:#68747a}
+.final{
+  padding:125px 0 145px;text-align:center;color:#fff;
+  background:
+    linear-gradient(120deg,rgba(70,94,106,.94),rgba(188,125,113,.82)),
+    url("assets/event1.jpg") center/cover;
+}
+.final h2{font-size:clamp(40px,6vw,68px);margin-bottom:18px}
+.final p{color:rgba(255,255,255,.88);max-width:650px;margin:0 auto 32px}
+.final .btn{background:#fff;color:var(--blue-deep);box-shadow:none}
+.form-url{margin-top:16px;font-size:12px;color:rgba(255,255,255,.72)}
+.info{
+  margin:55px auto 0;max-width:720px;text-align:left;
+  border-top:1px solid rgba(255,255,255,.35);border-bottom:1px solid rgba(255,255,255,.35);
+  padding:14px 0
+}
+.info-row{display:flex;padding:10px 0;font-size:13px}
+.info-row dt{width:110px;font-weight:700}
+.info-row dd{margin:0;color:rgba(255,255,255,.86)}
+footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#fff}
+.sticky{
+  display:none;position:fixed;bottom:0;left:0;right:0;padding:10px 14px;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(12px);z-index:20;border-top:1px solid var(--line)
+}
+.sticky .btn{width:100%;padding:12px}
+
+@media(max-width:850px){
+  .hero{padding:70px 0 90px}
+  .hero-grid,.two-col,.journey,.value-head{grid-template-columns:1fr;gap:45px}
+  .hero-visual{order:-1}
+  .hero-visual img{aspect-ratio:1.3}
+  .value-grid{grid-template-columns:repeat(2,1fr)}
+  .value{border-bottom:1px solid var(--line)}
+  .value:last-child{border-right:0}
+  .mosaic{grid-template-columns:1fr}
+  .mosaic-side{grid-template-columns:1fr 1fr;grid-template-rows:1fr}
+  .mosaic-main img{min-height:380px}
+  .timeline,.manifesto-grid{grid-template-columns:1fr 1fr}
+  .section{padding:80px 0}
+  .sticky{display:block}
+}
+@media(max-width:520px){
+  .wrap{width:calc(100% - 28px)}
+  h1{font-size:47px}
+  .hero:before{font-size:80px;top:40px}
+  .hand{left:0;bottom:-35px;font-size:21px}
+  .value-grid,.timeline,.manifesto-grid{grid-template-columns:1fr}
+  .mosaic-side{grid-template-columns:1fr}
+  .mosaic-main img{min-height:300px}
+  .section{padding:68px 0}
+  .hero-visual:after{right:-10px;bottom:-10px}
+  .info-row{display:block}.info-row dt{margin-bottom:2px}
+  body{padding-bottom:64px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="katakana">100 PEOPLE / NEW CONNECTIONS</div>
+      <h1>100人の挑戦が、<span>ここでつながる。</span></h1>
+      <div class="hero-date"><i></i>2027年2月6日（土）</div>
+      <p class="hero-text">
+        ただ名刺を交換して終わる交流会ではありません。<br>
+        出会う。知る。つながる。育む。応援し合う。<br>
+        あなたの「次の一歩」が始まる、100人の交流会。
+      </p>
+      <a class="btn" href="https://forms.gle/nYaSBe9MeGdcYiVJA" target="_blank" rel="noopener">参加する・チケットを申し込む　→</a>
+    </div>
+    <div class="hero-visual">
+      <div class="hand">New connections,<br>new possibilities.</div>
+      <img src="assets/event1.jpg" alt="交流会の参加者">
+    </div>
+  </div>
+</header>
+
+<div class="ribbon"><div class="ribbon-track"><span>出会う</span><span>知る</span><span>つながる</span><span>育む</span><span>応援し合う</span></div></div>
+
+<section class="section">
+  <div class="wrap intro center">
+    <div class="eyebrow">NOT JUST A NETWORKING EVENT</div>
+    <h2>「今年こそ、何か始めたい」<br>そんなあなたへ。</h2>
+    <p class="lead">
+      「一人で頑張っているけれど、少し不安がある」<br>
+      「一緒に前に進める仲間と出会いたい」<br>
+      そんな想いを持っている方に、ぜひ来てほしいと思っています。
+    </p>
+    <div class="quote">「今日はありがとうございました」で終わるのではなく、<br><em>「この人と出会えてよかった」</em>が残る1日に。</div>
+  </div>
+</section>
+
+<section class="section values">
+  <div class="wrap">
+    <div class="value-head">
+      <div><div class="eyebrow">WHAT YOU CAN FIND</div></div>
+      <h2>この交流会で<br>生まれること。</h2>
+    </div>
+    <div class="value-grid">
+      <div class="value"><div class="circle">◯</div><h3>出会う</h3><p>一緒に前に進める<br>仲間との出会い</p></div>
+      <div class="value"><div class="circle">✦</div><h3>知る</h3><p>自分にはなかった<br>視点や可能性</p></div>
+      <div class="value"><div class="circle">↗</div><h3>つながる</h3><p>仕事や協業に<br>つながるきっかけ</p></div>
+      <div class="value"><div class="circle">⌁</div><h3>育む</h3><p>自分の想いを<br>言葉にする</p></div>
+      <div class="value"><div class="circle">♡</div><h3>応援し合う</h3><p>お互いの挑戦を<br>背中から押す</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">REAL CONNECTIONS</div>
+    <h2>人と話す。<br>そこから、未来が動き出す。</h2>
+    <div class="mosaic">
+      <div class="mosaic-main">
+        <img src="assets/event2.jpg" alt="交流会で発表する参加者">
+        <div class="caption">Real connection.</div>
+      </div>
+      <div class="mosaic-side">
+        <img src="assets/event3.jpg" alt="参加者同士の交流">
+        <img src="assets/event4.jpg" alt="笑顔で交流する参加者">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap two-col">
+    <div class="story-photo"><img src="assets/event5.jpg" alt="交流会の参加者たち"></div>
+    <div class="story-copy">
+      <div class="eyebrow">WHY 100 PEOPLE?</div>
+      <h2>なぜ、100人交流会を<br>開催するのか。</h2>
+      <p>
+        私は、一人だとすぐに足が止まってしまう人間でした。<br>
+        やろうと決めても続かない。不安になると動けなくなる。
+      </p>
+      <p>
+        そんな私が挑戦を続けてこられたのは、一緒に挑戦し、背中を押し合える仲間に出会えたからです。
+      </p>
+      <div class="bigline">「一人でやらなくていい」<br>と思える場所をつくりたい。</div>
+      <p>
+        ただ出会うだけではなく、つながって、そのご縁を育んでいく。<br>
+        お互いの想いを知り、怖くてもまた一歩踏み出せる。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section manifesto">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">OUR VALUES</div>
+      <h2>この交流会で<br>大切にしたいこと。</h2>
+    </div>
+    <div class="manifesto-grid">
+      <div class="manifesto-card"><b>01　まず、相手を知る。</b><p>一方的に自分を売り込むのではなく、「この人はどんな人なんだろう？」から始める。</p></div>
+      <div class="manifesto-card"><b>02　自分は誰かの力になれるか？</b><p>自分が何かを得るだけではなく、相手にも何ができるかを考えてみる。</p></div>
+      <div class="manifesto-card"><b>03　ご縁を、その場で終わらせない。</b><p>相談したり、紹介し合ったり、一緒に仕事をしたり。また新しいことを始めたり。</p></div>
+      <div class="manifesto-card"><b>04　「次の一歩」を応援する。</b><p>誰かの宣言を聞き、「やってみよう」と思える空気を、みんなでつくる。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap journey">
+    <div>
+      <div class="eyebrow">THE JOURNEY TO 100</div>
+      <h2>2月6日までの挑戦も、<br>すべて公開します。</h2>
+      <p class="lead">最初から100人のつながりがあるわけではありません。一人と出会い、また一人とつながる。その積み重ねの先に、2027年2月6日があります。</p>
+      <ul class="checks">
+        <li>毎月のリアル交流会</li>
+        <li>オンライン交流会</li>
+        <li>YouTubeでの発信</li>
+        <li>さまざまな方とのコラボLIVE</li>
+        <li>参加者へのインタビュー</li>
+        <li>外見ブランディングのBefore → After</li>
+      </ul>
+    </div>
+    <div class="journey-photo"><img src="assets/event1.jpg" alt="100人交流会へ向けた活動"></div>
+  </div>
+  <div class="wrap timeline">
+    <div class="step"><span class="no">STEP 01</span><strong>出会う</strong><span>まずは目の前の一人を知る。</span></div>
+    <div class="step"><span class="no">STEP 02</span><strong>つながる</strong><span>一度きりで終わらない関係へ。</span></div>
+    <div class="step"><span class="no">STEP 03</span><strong>応援し合う</strong><span>挑戦を言葉にして背中を押す。</span></div>
+    <div class="step"><span class="no">STEP 04</span><strong>100人につながる</strong><span>一つひとつのご縁の積み重ね。</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap center intro">
+    <div class="eyebrow">A DAY TOGETHER</div>
+    <h2>2027年2月6日、<br>こんな1日に。</h2>
+    <p class="lead">
+      普段の生活ではなかなか出会えない、さまざまな分野で活動する人たちが集まります。
+      自分のことを伝えるだけではなく、相手の話にも耳を傾ける。
+    </p>
+    <p>
+      「今、何をやっているんですか？」<br>
+      「これから、どんなことをやりたいんですか？」<br>
+      「それなら、こんな人を知っています」<br>
+      「一緒に何かできるかもしれないですね」
+    </p>
+    <div class="quote"><em>新しい出会いが、未来をつくる。</em></div>
+  </div>
+</section>
+
+<section class="final" id="entry">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#f3c0b7">2027.02.06 SAT</div>
+    <h2>100人の挑戦が、<br>ここでつながる。</h2>
+    <p>
+      100人いるだけの会にはしません。<br>
+      新しい出会いが、気づきを生み、次の仕事や新しい一歩につながる。<br>
+      そんな「未来の入り口」を、一緒につくりませんか？
+    </p>
+    <a class="btn" href="https://forms.gle/nYaSBe9MeGdcYiVJA" target="_blank" rel="noopener">参加する・チケットを申し込む　→</a>
+    <div class="form-url">forms.gle/nYaSBe9MeGdcYiVJA</div>
+    <div class="info">
+      <div class="info-row"><dt>日時</dt><dd>2027年2月6日（土）</dd></div>
+      <div class="info-row"><dt>内容</dt><dd>100人交流会</dd></div>
+      <div class="info-row"><dt>対象</dt><dd>新しい出会い・挑戦・つながりを求めている方</dd></div>
+      <div class="info-row"><dt>参加費</dt><dd>申込フォームにてご案内</dd></div>
+    </div>
+  </div>
+</section>
+
+<footer>100人の挑戦が、ここでつながる。 © 2027</footer>
+<div class="sticky"><a class="btn" href="https://forms.gle/nYaSBe9MeGdcYiVJA" target="_blank" rel="noopener">2027/2/6　参加する →</a></div>
+</body>
+</html>
