@@ -116,16 +116,16 @@ h1 span.highlight{color:var(--coral)}
 .value:nth-child(4) .circle{background:#e5eee6;color:#728a78}
 .value h3{font-family:"Shippori Mincho",serif;font-size:20px;margin-bottom:7px}
 .value p{font-size:13px;color:#6b7479;margin:0}
-.mosaic{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:55px}
-.mosaic-main{position:relative}
-.mosaic-main img{height:100%;object-fit:cover;min-height:520px;border-radius:3px}
-.mosaic-side{display:grid;grid-template-rows:1fr 1fr;gap:18px;border-radius:3px;overflow:hidden}
-.mosaic-side img{height:100%;object-fit:cover}
+
+/* 1枚画像用スタイル */
+.single-visual{position:relative;margin-top:55px}
+.single-visual img{width:100%;max-height:520px;aspect-ratio:16/9;object-fit:cover;border-radius:3px}
 .caption{
   position:absolute;left:22px;bottom:18px;color:#fff;
   font-family:"Shippori Mincho",serif;font-size:29px;font-style:italic;
   text-shadow:0 2px 12px #000
 }
+
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .story-photo{position:relative}
 .story-photo img{aspect-ratio:.86;object-fit:cover}
@@ -144,6 +144,136 @@ h1 span.highlight{color:var(--coral)}
 .manifesto-card{background:#fff;padding:34px;border:1px solid #dce6e7}
 .manifesto-card b{font-family:"Shippori Mincho",serif;font-size:22px;font-weight:500;color:var(--blue-deep)}
 .manifesto-card p{font-size:14px;color:#657177;margin:10px 0 0}
+
+/* --- OUR POLICY (スタイリッシュデザイン) --- */
+.policy {
+  background: var(--ink);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.policy:before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217,130,117,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.policy .eyebrow {
+  color: var(--pink);
+}
+.policy h2 {
+  color: #fff;
+}
+.policy-lead {
+  font-size: 16px;
+  color: rgba(255,255,255,0.85);
+  line-height: 2.1;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* --- 吹き出し風デザイン --- */
+.policy-chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 580px;
+  margin: 30px auto;
+}
+
+.chat-bubble {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 20px;
+  font-family: "Shippori Mincho", serif;
+  font-size: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  width: fit-content;
+  max-width: 90%;
+}
+
+/* 左側の吹き出し（白系・透明感） */
+.chat-bubble.left {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  border-bottom-left-radius: 4px;
+}
+
+/* 右側の吹き出し（アクセントのコーラルカラー） */
+.chat-bubble.right {
+  align-self: flex-end;
+  background: rgba(217, 130, 117, 0.22);
+  border: 1px solid rgba(217, 130, 117, 0.5);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.bubble-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.bubble-text {
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+  text-align: left;
+}
+.policy-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 36px 28px;
+  position: relative;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+.policy-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(217, 130, 117, 0.5);
+}
+.policy-num {
+  font-family: "Shippori Mincho", serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--coral);
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.policy-card h3 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+.policy-card p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.85;
+  margin: 0;
+}
+
 .journey{
   display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center
 }
@@ -212,12 +342,9 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
   .value{border-bottom:1px solid var(--line)}
   .value:last-child{border-right:0}
   
-  .mosaic{grid-template-columns:1fr}
-  .mosaic-side{grid-template-columns:1fr 1fr;grid-template-rows:1fr;gap:12px}
-  .mosaic-side img{height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:3px}
-  .mosaic-main img{min-height:300px;aspect-ratio:16/9;object-fit:cover}
+  .single-visual img{aspect-ratio:16/9}
 
-  .manifesto-grid{grid-template-columns:1fr 1fr}
+  .manifesto-grid,.policy-grid{grid-template-columns:1fr}
   .section{padding:80px 0}
   .sticky{display:block}
 }
@@ -226,12 +353,9 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
   .wrap{width:calc(100% - 28px)}
   .hero:before{font-size:80px;top:40px}
   .hand{left:0;bottom:-35px;font-size:21px}
-  .value-grid,.manifesto-grid{grid-template-columns:1fr}
+  .value-grid,.manifesto-grid,.policy-grid{grid-template-columns:1fr}
   
-  /* スマホでの画像の拡大（ズーム）解消 */
-  .mosaic-side{grid-template-columns:1fr;gap:12px}
-  .mosaic-side img{height:auto;aspect-ratio:16/9;object-fit:cover}
-  .mosaic-main img{min-height:220px;aspect-ratio:16/9}
+  .single-visual img{aspect-ratio:16/9;max-height:260px}
 
   .section{padding:68px 0}
   .hero-visual:after{right:-10px;bottom:-10px}
@@ -247,6 +371,15 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
   .final{
     padding:80px 0 100px;
     background: linear-gradient(120deg,rgba(70,94,106,.94),rgba(188,125,113,.82));
+  }
+
+  .policy-chat-container {
+    margin: 24px auto;
+    gap: 12px;
+  }
+  .chat-bubble {
+    font-size: 14px;
+    padding: 12px 18px;
   }
 }
 </style>
@@ -336,22 +469,16 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
   <div class="wrap">
     <div class="eyebrow">REAL CONNECTIONS</div>
     <h2>一歩を踏み出す。<br>そこから、未来が動き出す。</h2>
-    <div class="mosaic">
-      <div class="mosaic-main">
-        <img src="assets/event2.jpg" alt="交流会での発表の様子">
-        <div class="caption">Warm connection.</div>
-      </div>
-      <div class="mosaic-side">
-        <img src="assets/event3.jpg" alt="笑顔で話し合う参加者">
-        <img src="assets/event4.jpg" alt="仲間とともに過ごす時間">
-      </div>
+    <div class="single-visual">
+      <img src="assets/event2.jpg" alt="交流会での発表の様子">
+      <div class="caption">Warm connection.</div>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap two-col">
-    <div class="story-photo"><img src="assets/event5.jpg" alt="対話を通して深まるつながり"></div>
+    <div class="story-photo"><img src="assets/event3.jpg" alt="笑顔で話し合う参加者"></div>
     <div class="story-copy">
       <div class="eyebrow">WHY 100 PEOPLE?</div>
       <h2>
@@ -409,6 +536,55 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
   </div>
 </section>
 
+<!-- OUR POLICY セクション (デザインリニューアル) -->
+<section class="section policy">
+  <div class="wrap center">
+    <div class="eyebrow">OUR POLICY</div>
+    <h2>この交流会で<br>大切にしたいこと</h2>
+    
+    <p class="policy-lead">
+      一方的に自分のビジネスを売り込む場所ではなく、まずはお互いを知ることから。
+    </p>
+
+    <!-- 吹き出しエリア -->
+    <div class="policy-chat-container">
+      <div class="chat-bubble left">
+        <span class="bubble-icon">💭</span>
+        <span class="bubble-text">「この人に何ができるだろう？」</span>
+      </div>
+      <div class="chat-bubble right">
+        <span class="bubble-text">「この人とこの人を繋いだら面白そう！」</span>
+        <span class="bubble-icon">💡</span>
+      </div>
+    </div>
+
+    <p class="policy-lead" style="margin-bottom: 50px;">
+      人が人を応援し、ご縁が次のご縁につながっていく場所を目指しています。
+    </p>
+
+    <div class="policy-grid">
+      <div class="policy-card">
+        <span class="policy-num">POLICY 01</span>
+        <h3>ゆっくり語り合える<br>着席スタイル</h3>
+        <p>当日はテーブルごとに『今挑戦していること』をじっくりシェアし合う時間をしっかりご用意。何を話せばいいか迷う心配はありません。</p>
+      </div>
+
+      <div class="policy-card">
+        <span class="policy-num">POLICY 02</span>
+        <h3>初めての方・人見知りも<br>安心のサポート</h3>
+        <p>「ひとりでの参加は緊張する…」という方もご安心ください。スタッフが温かくフォローし、自然に会話が弾む空気をつくります。</p>
+      </div>
+
+      <div class="policy-card">
+        <span class="policy-num">POLICY 03</span>
+        <h3>その日だけで終わらない<br>安心できる居場所</h3>
+        <p>2月6日の100人だけで完結するのではなく、互いの挑戦を応援し合い、ここから先もずっと続いていく「温かな居場所」をつくります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP BY STEP セクション -->
 <section class="section">
   <div class="wrap journey">
     <div>
@@ -433,7 +609,7 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
       </ul>
     </div>
     <div class="journey-photo">
-      <img src="assets/event6.jpg" alt="主催者 花岡綾子">
+      <img src="assets/event4.jpg" alt="主催者 花岡綾子">
       <p class="journey-photo-name">主催者 花岡綾子</p>
     </div>
   </div>
@@ -455,9 +631,9 @@ footer{text-align:center;padding:30px;color:#899297;font-size:11px;background:#f
     <div class="info">
       <div class="info-row"><dt>日時</dt><dd>2027年2月6日（土）13:00〜16:00</dd></div>
       <div class="info-row"><dt>内容</dt><dd>100人交流会</dd></div>
-      <div class="info-row"><dt>場所</dt><dd>新宿駅周辺（詳細は別途ご案内）</dd></div>
+      <div class="info-row"><dt>場所</dt><dd>東京都内（品川・新宿エリア予定）<br>（詳細は別途ご案内）</dd></div>
       <div class="info-row"><dt>対象</dt><dd>起業の有無を問わず、<br class="sp-only">新しい一歩を踏み出したい、<br class="sp-only">仲間とつながりたい方</dd></div>
-      <div class="info-row"><dt>参加費</dt><dd>3,000円</dd></div>
+      <div class="info-row"><dt>参加費</dt><dd>3,000円<br>20歳未満無料</dd></div>
     </div>
   </div>
 </section>
